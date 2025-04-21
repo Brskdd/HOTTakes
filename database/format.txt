@@ -1,0 +1,41 @@
+UNIVERSRAL (added to all bets)
+{
+    "match": 1 (whatever match betting on)
+    "id": 1 (for databank purposes)
+    "odds": 1.5
+}
+
+MONEYLINE
+{
+    "winner": "red" (or blue)
+}
+
+SPREAD
+{
+    "winner": "red"
+    "difference": 10 (how much the difference has to be more/less than)
+    "spreadtype": "over" (over if the actual diff is wider than the prediction, under if less)
+}
+
+OVERUNDER
+{
+    "totalscore": 500 (the bet is whether both teams go over or under this value)
+    "type": "total" (or auton, coral, algae, climb, RP)
+}
+
+PARLAY
+{
+    "ids": [
+        1,
+        2,
+        3
+    ]
+}
+
+NOT UNIVERSAL (ignore the schema from above)
+
+SEEDING
+{
+    "team": 1
+    "type: "exact" (exact for top 8, beyond can be over/under)
+}
