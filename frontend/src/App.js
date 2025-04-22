@@ -29,26 +29,27 @@ function App() {
         justifyContent: 'space-around',
         alignItems: 'center',
         height: '50px',
-        backgroundColor: '#f0f0f0'
+        backgroundColor: '#f0f0f0',
+        borderTop: "1px solid white"
       }}>
-        <p 
+        <div 
           onClick={() => setActiveTab('Dashboard')} 
-          style={{ flex: 1, textAlign: 'center', cursor: 'pointer' }}
+          style={{ backgroundColor: "#101010", color: 'white', flex: 1, textAlign: 'center', cursor: 'pointer', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex'}}
         >
           Dashboard
-        </p>
-        <p 
+        </div>
+        <div 
           onClick={() => setActiveTab('Selection1')} 
-          style={{ flex: 1, textAlign: 'center', cursor: 'pointer' }}
+          style={{ backgroundColor: "#101010", color: 'white', flex: 1, textAlign: 'center', cursor: 'pointer', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}
         >
           Selection 1
-        </p>
-        <p 
+        </div>
+        <div 
           onClick={() => setActiveTab('Selection2')} 
-          style={{ flex: 1, textAlign: 'center', cursor: 'pointer' }}
+          style={{ backgroundColor: "#101010", color: 'white', flex: 1, textAlign: 'center', cursor: 'pointer', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}
         >
           Selection 2
-        </p>
+        </div>
       </div>
     </div>
   );
