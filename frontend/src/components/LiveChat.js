@@ -1,13 +1,27 @@
+import { useState } from 'react';
+
 function LiveChat() {
-return (
-    <div style={{ display: 'flex', width: '20%', backgroundColor: '#101010' }}>
-        <div>
-            <p style={{ color: 'white' }}>coming soon</p>
+    const [isOpen, setIsOpen] = useState(true);
+
+    const toggleChat = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <div style={{ display: 'flex', justifyContent: isOpen ? 'flex-end' : 'flex-start', width: isOpen ? '20%' : '15px', backgroundColor: '#101010' }}>
+            {isOpen && (
+                <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column', width: "100%", height: "100%", color: 'white' }}>
+                    <p>live chat</p>
+                    <p>coming soon</p>
+                </div>
+            )}
+            <div
+                style={{ width: "15px", backgroundColor: "#dfdfef", height: "100%", cursor: 'pointer' }}
+                onClick={toggleChat}
+            >
+            </div>
         </div>
-        <div style={{ width: "5px", backgroundColor: "#ff00ff", height: "100%" }}>
-        </div>
-    </div>
-);
+    );
 }
 
 export default LiveChat;
