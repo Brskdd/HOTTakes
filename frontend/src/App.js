@@ -11,7 +11,7 @@ function App() {
       case 'Dashboard':
         return <Dashboard />;
       case 'Selection1':
-        return <p>Selection1</p>;
+        return <p>Profile</p>;
       case 'Selection2':
         return <p>Selection2</p>;
       default:
@@ -34,19 +34,58 @@ function App() {
       }}>
         <div 
           onClick={() => setActiveTab('Dashboard')} 
-          style={{ backgroundColor: "#101010", color: 'white', flex: 1, textAlign: 'center', cursor: 'pointer', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex'}}
+          style={{
+            backgroundColor: "#101010",
+            color: 'white',
+            flex: 1,
+            textAlign: 'center',
+            cursor: 'pointer',
+            height: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            display: 'flex',
+            transition: 'background-color 0.3s',
+          }}
+          onMouseEnter={(e) => e.target.style.backgroundColor = '#303030'}
+          onMouseLeave={(e) => e.target.style.backgroundColor = '#101010'}
         >
           Dashboard
         </div>
         <div 
           onClick={() => setActiveTab('Selection1')} 
-          style={{ backgroundColor: "#101010", color: 'white', flex: 1, textAlign: 'center', cursor: 'pointer', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}
+          style={{
+            backgroundColor: "#101010",
+            color: 'white',
+            flex: 1,
+            textAlign: 'center',
+            cursor: 'pointer',
+            height: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            display: 'flex',
+            transition: 'background-color 0.3s',
+          }}
+          onMouseEnter={(e) => e.target.style.backgroundColor = '#303030'}
+          onMouseLeave={(e) => e.target.style.backgroundColor = '#101010'}
         >
-          Selection 1
+          Profile
         </div>
         <div 
           onClick={() => setActiveTab('Selection2')} 
-          style={{ backgroundColor: "#101010", color: 'white', flex: 1, textAlign: 'center', cursor: 'pointer', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}
+          style={{
+            backgroundColor: "#101010",
+            color: 'white',
+            flex: 1,
+            textAlign: 'center',
+            cursor: 'pointer',
+            height: '100%',
+            justifyContent: 'center',
+            alignItems: 'center',
+            display: 'flex',
+            transition: 'background-color 0.3s',
+          }}
+          onMouseEnter={(e) => e.target.style.backgroundColor = '#303030'}
+          onMouseLeave={(e) => e.target.style.backgroundColor = '#101010'}
         >
           Selection 2
         </div>
