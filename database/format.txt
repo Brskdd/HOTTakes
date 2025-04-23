@@ -3,6 +3,7 @@ UNIVERSRAL (added to all bets)
     "match": 1 (whatever match betting on)
     "id": 1 (for databank purposes)
     "odds": 1.5
+    "result": "unknown" (true if won, false if lost)
 }
 
 MONEYLINE

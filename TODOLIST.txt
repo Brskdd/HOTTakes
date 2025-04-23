@@ -1,0 +1,24 @@
+make account system
+    backend
+        X routing for registration
+        routing for login
+    frontend
+        form for registration
+        form for login
+bracket
+    database
+        come up with a structure to store them
+    backend
+        routing for when user wants to write or read the bracket
+    frontend
+        make display component
+        make it read what the user made as their bracket
+bets
+    database
+        bet storing system (each type should be its own file)
+    backend
+        system to keep a live update from first/tba to see if bets won or not and update result
+        odds calculator when making bets
+    frontend
+        bet display sidebar
+        toaster when bet results come in

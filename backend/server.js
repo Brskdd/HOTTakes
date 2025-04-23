@@ -10,14 +10,14 @@ app.use(express.json());
 
 // Define a basic route
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+    res.send('Hello, World!');
 });
 
 app.post("/createuser", async (req, res) => {
 
     const { name, password } = req.body
 
-    if (!name || !password ) {
+    if (!name || !password) {
         return res.status(400).json({ error: "fill out the whole form" })
     }
 
@@ -49,5 +49,5 @@ app.post("/createuser", async (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
