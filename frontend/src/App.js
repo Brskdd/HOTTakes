@@ -2,16 +2,28 @@ import logo from './logo.svg';
 import './App.css';
 import Dashboard from './components/Dashboard';
 import { useState } from 'react';
+import LoginForm from './components/LoginForm';
 
 function App() {
   const [activeTab, setActiveTab] = useState('Dashboard');
+
+  const [token, setToken] = useState(null);
+
+  const tokenhandle = (token) => {
+    setToken(token);
+  }
 
   const renderContent = () => {
     switch (activeTab) {
       case 'Dashboard':
         return <Dashboard />;
-      case 'Selection1':
-        return <p>Profile</p>;
+      case 'Profile':
+        return(
+            <div>
+                <LoginForm onLogin={tokenhandle} />
+                <p>Token: {token}</p>
+            </div>
+        )
       case 'Selection2':
         return <p>Selection2</p>;
       default:
@@ -52,7 +64,7 @@ function App() {
           Dashboard
         </div>
         <div 
-          onClick={() => setActiveTab('Selection1')} 
+          onClick={() => setActiveTab('Profile')} 
           style={{
             backgroundColor: "#101010",
             color: 'white',

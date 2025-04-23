@@ -1,9 +1,7 @@
-{
-    [
-        {
-            "name": "Aiden Z",
-            "money": 1000,
-            "password": "123456"
-        }
-    ]
-}
+[
+    {
+        "name": "Aiden Z",
+        "money": 1000,
+        "password": "123456"
+    }
+]
