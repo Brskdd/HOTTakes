@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs')
 const cors = require('cors')
 const path = require('path');
 const bodyParser = require('body-parser');
+const crypt = require('crypto');
 
 const datapath = "../database/users.json"
 
@@ -89,12 +90,14 @@ app.post("/api/login", async (req, res) => {
         }
 
         if (loggedin[name]) {
-            return res.status(400).json({ error: "already logged in" });
+            return res.status(200).json({ message: "login successful", token: user.password }); // OR IF YOU DONT WANT TO REPEAT LOGIN res.status(400).json({ error: "already logged in" });
         }
 
-        loggedin[name] = user.password;
+        const authtoken = crypt.randomBytes(16).toString('hex'); // Generate a random token
+        console.log("new authtoken: ", authtoken)
+        loggedin[name] = authtoken;
 
-        res.status(200).json({ message: "login successful", token: user.password });
+        res.status(200).json({ message: "login successful", token: authtoken });
     } catch (error) {
         console.error("Error during login:", error);
         res.status(500).json({ error: "Internal server error" });
@@ -133,6 +136,12 @@ app.post("/api/createuser", async (req, res) => {
         console.error("Error creating user:", error);
         res.status(500).json({ error: "Internal server error" });
     }
+})
+
+app.get("/api/getusername", async (req, res) => {
+    console.log("get username req")
+    const { data, token } = req.body
+    res.json({ name: "test" })
 })
 
 // Start the server

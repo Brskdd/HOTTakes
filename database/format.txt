@@ -40,3 +40,11 @@ SEEDING
     "team": 1
     "type: "exact" (exact for top 8, beyond can be over/under)
 }
+
+BRACKET
+{
+    "match": 1 (look at the way TBA numbers matches, let finals be 14)
+    "redalliance": 1
+    "bluealliance": 2
+    "winner": red (im sure you can guess what the other option is)
+}

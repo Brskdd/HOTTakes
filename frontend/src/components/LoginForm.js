@@ -38,7 +38,7 @@ function LoginForm({ onLogin }) {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: "calc(100vh - 51px)" }}>
       <div style={{ width: '300px', padding: '20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>
         <h2 style={{ textAlign: 'center' }}>Login or Register</h2>
         <form>

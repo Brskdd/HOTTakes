@@ -1,10 +1,11 @@
 make account system
     backend
         X routing for registration
-        routing for login
+        X routing for login
     frontend
-        form for registration
-        form for login
+        X form for registration
+        X form for login
+        User profile page
 bracket
     database
         come up with a structure to store them

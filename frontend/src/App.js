@@ -9,21 +9,32 @@ function App() {
 
   const [token, setToken] = useState(null);
 
-  const tokenhandle = (token) => {
+  const tokenhandle = (response) => {
+    const resjson = JSON.parse(response);
+    const token = resjson.token
+    console.log("token: ", token)
     setToken(token);
   }
 
   const renderContent = () => {
     switch (activeTab) {
       case 'Dashboard':
-        return <Dashboard />;
+        return (
+          token == null ? (
+            <p>user not logged in</p>
+          ) : (
+            <Dashboard token={token} />
+          )
+
+        );
       case 'Profile':
-        return(
-            <div>
-                <LoginForm onLogin={tokenhandle} />
-                <p>Token: {token}</p>
-            </div>
-        )
+        return (
+          token == null ? (
+            <LoginForm onLogin={tokenhandle} />
+          ) : (
+            <p>token {token}</p>
+          )
+        );
       case 'Selection2':
         return <p>Selection2</p>;
       default:
@@ -44,8 +55,8 @@ function App() {
         backgroundColor: '#f0f0f0',
         borderTop: "1px solid white"
       }}>
-        <div 
-          onClick={() => setActiveTab('Dashboard')} 
+        <div
+          onClick={() => setActiveTab('Dashboard')}
           style={{
             backgroundColor: "#101010",
             color: 'white',
@@ -63,8 +74,8 @@ function App() {
         >
           Dashboard
         </div>
-        <div 
-          onClick={() => setActiveTab('Profile')} 
+        <div
+          onClick={() => setActiveTab('Profile')}
           style={{
             backgroundColor: "#101010",
             color: 'white',
@@ -82,8 +93,8 @@ function App() {
         >
           Profile
         </div>
-        <div 
-          onClick={() => setActiveTab('Selection2')} 
+        <div
+          onClick={() => setActiveTab('Selection2')}
           style={{
             backgroundColor: "#101010",
             color: 'white',
