@@ -1,7 +1,12 @@
 [
-    {
-        "name": "Aiden Z",
-        "money": 1000,
-        "password": "123456"
-    }
+  {
+    "name": "Aiden Z",
+    "money": 1000,
+    "password": "123456"
+  },
+  {
+    "name": "qwer",
+    "money": 20,
+    "password": "$2b$10$B4/yOeRZByM9G/mcLS.l9OlRlV9bN8EfZN9r28nOU2r0xHK2ZiLF."
+  }
 ]
